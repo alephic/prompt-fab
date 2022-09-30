@@ -1,0 +1,33 @@
+[project]
+name = "prompt_fab"
+version = "0.1.0"
+description = "Toolkit for building prompt templates for language models"
+authors = [
+    {name = "Kaj Bostrom", email = "kaj@cs.utexas.edu" }
+]
+license = {text = "Apache-2.0"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "openai>=0.23.1"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alephic/prompt-fab"
+"Repository" = "https://github.com/alephic/prompt-fab"
+"Bug Tracker" = "https://github.com/alephic/prompt-fab/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["prompt_fab*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"prompt_fab" = ["py.typed", "*.pyi"]
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools >= 61.0.0",
+    "wheel"
+]
